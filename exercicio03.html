@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+    <h2>Para o ser humano, a temperatura é</h2>
+
+    <p>qual a temperatura: <input type="text" id="in_temp" onkeyup="temperatura()"></p>
+    <div id="div_temp"></div>
+
+</body>
+</html>
+<script>
+    function temperatura(){
+        var temp = Number(in_temp.value)
+        var frase = ""
+
+        if(temp < 14){
+            frase = "Congelante"    
+        }else if(temp <= 21){
+            frase = "Com Frio"
+        }else if(temp <= 24){
+            frase = "Confortável"
+        }else if(temp <= 31){
+            frase = "Com Calor"
+        }else{
+            frase = "Calor Escaldante"
+        }
+
+        div_temp.innerHTML = frase
+    }
+</script>

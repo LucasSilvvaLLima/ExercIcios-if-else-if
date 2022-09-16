@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<body>
+    <p>Qual a sua renda mensal Familiar mensal? <input type="text" id="in_renda"></p>
+    <button onclick="analisa()">Analisar Renda</button><br>
+    <div id="div_renda"></div>
+</body>
+</html>
+<script>
+    function analisa(){
+        var renda = Number(in_renda.value)
+        var frase = ""
+
+        if (renda <= 250) {
+            frase = "Classe E"
+        }else if(renda <= 900){
+            frase = "Classe D"
+        }else if(renda <= 2500){
+            frase = "Classe C"
+        }else if(renda <= 9500){
+            frase = "Classe B"
+        }else{
+            frase = "Classe A"
+        }
+
+        div_renda.innerHTML = frase
+
+    }
+</script>
