@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+<body>
+    <select name="" id="sel_time">
+        <option value="">Qual grande time de São Paulo você torce</option>
+        <option value="Salve o Corinthians">Corinthians</option>
+        <option value="Salve o alviverde imponente">Palmeiras</option>
+        <option value="Agora quem dá a bola é o Santos">Santos</option>
+        <option value="Salve o Tricolor paulista">São Paulo</option>
+    </select>
+    <button onclick="fale_sobre()">Fale sobre esse time</button><br><br>
+    <div id="div_time" style="color: black;"></div>
+
+</body>
+</html>
+<script>
+    function fale_sobre(){
+        var time = sel_time.value
+
+        if(time == "Salve o Corinthians"){
+            div_time.style = "background-color: black; color: white;"
+        }else if(time == "Salve o alviverde imponente"){
+            div_time.style = "background-color: green; color: white;"
+        }else if(time == "Agora quem dá a bola é o Santos"){
+            div_time.style = "background-color: white; color: black;"
+        }else if (time == "Salve o Tricolor paulista"){
+            div_time.style = "background-color: black; color: red;"
+        }
+        div_time.innerHTML = time
+    }
+</script>

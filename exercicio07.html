@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+</head>
+
+<body>
+    <p>De quanto é a sua econômia: <input type="text" id="in_economia"></p>
+    <button onclick="pode_comprar()">Poder Comprar</button><br><br>
+    <div id="div_economia"></div>
+</body>
+
+</html>
+<script>
+    function pode_comprar() {
+        var valor = Number(in_economia.value)
+        var frase = ""
+        if (valor <= 0) {
+            frase = "Nada de compras triste 😫"
+        }else{
+            if (valor > 0) {
+                frase += "Viajem de ida e volta pra Praia Grande <br>"    
+            }
+            if (valor > 100) {
+                frase += "Uma boa moto usada <br>"
+            }
+            if (valor >= 4000) {
+                frase += "Mais alguma bobagem legal"
+            }
+        }
+         
+        div_economia.innerHTML = frase
+    }
+
+</script>
